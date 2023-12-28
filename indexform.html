@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleform.css">
+  <title>Formulario de Compras</title>
+</head>
+
+<body>
+
+  <section class="main-container__form-section">
+
+    <form class="form" action="">
+
+      <label class="form__label" for="cardholder">Nombre y Apellido</label>
+      <input class="form__input" type="text" name="cardholder" id="cardholder" placeholder="ej Juan Perez"
+        onkeydown="return /[a-z]/i.test(event.key)">
+      <div class="form__cardholder--error error"></div>
+
+      <label class="form__label" for="cardmail">Correo Electrónico</label>
+      <input class="form__input" type="email" name="cardmail" id="cardmail" placeholder="ej juanperez@mail.com">
+      <div class="form__mail--error error"></div>
+
+      <label class="form__label" for="cardNumber">Numero de Tarjeta</label>
+      <input class="form__input" type="text" name="cardNumber" id="cardNumber" maxlength="19"
+        placeholder="ej 1234 5678 9123 0000"
+        onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.keyCode == 8 || event.keyCode == 46'>
+      <div class="form__inputnumber--error error"></div>
+
+      <div class="form__date-cvc">
+
+        <label class="form__label" for="cardMonth">Vencimiento (MM/YY)</label>
+        <label class="form__label" for="cardCvc">CVC</label>
+
+        <div class="form__date">
+          <input class="form__input" type="text" maxlength="2" name="cardMonth" id="cardMonth" placeholder="MM"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.keyCode == 8 || event.keyCode == 46'>
+          <input class="form__input" type="text" maxlength="2" name="cardYear" id="cardYear" placeholder="YY"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.keyCode == 8 || event.keyCode == 46'>
+        </div>
+
+        <input class="form__input" type="text" maxlength="3" name="cardCvc" id="cardCvc" placeholder="ej 123"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.keyCode == 8 || event.keyCode == 46'>
+
+        <div class="form__errors-container">
+          <div class="form__input-mm--error error"></div>
+          <div class="form__input-yy--error error"></div>
+        </div>
+
+        <div class="form__input-cvc--error error"></div>
+
+      </div>
+      <input class="form__submit" type="submit" value="Confirmar  ">
+    </form>
+
+    <section class="thanks-section">
+      <h1 class="thanks-section__title">Gracias por su compra</h1>
+      <p class="thanks-section__text">Sus datos han sido ingresados correctamente</p>
+      <button class="thanks-section__button" onclick="location.href='index.html'">Volver a la pagina principal</button>
+    </section>
+
+  </section>
+
+  </main>
+  <script src="scriptform.js" async></script>
+</body>
+
+</html>
