@@ -1,15 +1,12 @@
 // CARD NAME
-let nameCard = document.querySelector('.card__details-name');
 let nameInput = document.querySelector('#cardholder');
 let nameErrorDiv = document.querySelector('.form__cardholder--error');
 
 // CARD MAIL
-let mailCard = document.querySelector('.card__details-mail');
 let mailInput = document.querySelector('#cardmail');
 let mailErrorDiv = document.querySelector('.form__mail--error');
 
 // CARD NUMBER
-let numberCard = document.querySelector('.card__number');
 let numberInput = document.querySelector('#cardNumber');
 let numberErrorDiv = document.querySelector('.form__inputnumber--error');
 
